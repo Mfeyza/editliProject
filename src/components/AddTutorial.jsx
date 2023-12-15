@@ -11,7 +11,9 @@ const AddTutorial = ({getTutorials,setShowEdit,showEdit}) => {
     e.preventDefault()
     console.log(newTutorial);
     postTutorial(newTutorial)
-    setShowEdit(false);
+    setDescription("")
+    setTitle("")
+    
   }
   const postTutorial = async (newTutorial) => {
     try {
@@ -26,7 +28,7 @@ const AddTutorial = ({getTutorials,setShowEdit,showEdit}) => {
   return (
     <div className="container text-center mt-4">
       <h1 className="display-6 text-danger">Add Your Tutorial</h1>
-      <form onClick={handleSubmit} >
+      <form onSubmit={handleSubmit} >
         <div className="mb-3">
           <label htmlFor="title" className="form-label">
             Title

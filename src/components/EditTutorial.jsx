@@ -7,7 +7,7 @@ const EditTutorial = ({ getTutorials, selectedTutorial }) => {
     const [description, setDescription] = useState('');
   
     useEffect(() => {
-      if (!selectedTutorial) {
+      if (selectedTutorial) {
         setTitle(selectedTutorial.title);
         setDescription(selectedTutorial.description);
       }
